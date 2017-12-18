@@ -33,23 +33,23 @@
 }
 
 
-NSString *nameGetter(id self, SEL _cmd)
-{
-    Ivar ivar = class_getInstanceVariable([Person class], "_privateName");
-    
-    return object_getIvar(self, ivar);
-    
-}
-void nameSetter(id self, SEL _cmd, NSString *newName)
-{
-    
-    Ivar ivar = class_getInstanceVariable([Person class], "_privateName");
-    
-    id oldName = object_getIvar(self, ivar);
-    
-    if (oldName != newName) object_setIvar(self, ivar, [newName copy]);
-    
-}
+//NSString *nameGetter(id self, SEL _cmd)
+//{
+//    Ivar ivar = class_getInstanceVariable([Person class], "_privateName");
+//    
+//    return object_getIvar(self, ivar);
+//    
+//}
+//void nameSetter(id self, SEL _cmd, NSString *newName)
+//{
+//
+//    Ivar ivar = class_getInstanceVariable([Person class], "_privateName");
+//
+//    id oldName = object_getIvar(self, ivar);
+//
+//    if (oldName != newName) object_setIvar(self, ivar, [newName copy]);
+//
+//}
 
 
 
